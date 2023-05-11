@@ -49,7 +49,7 @@
                 <li><a class="dropdown-item" href="#">Esgotados</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Cadastrar</a>
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item" href="#">Cadastrar</a>
                 </li>
               </ul>
             </li>
@@ -71,7 +71,7 @@
 
     <!--O card veio colado na borda portanto nos vamos colocar ele dentro de uma div -->
     <!--o mt significa margin top o 3 é 1rem-->
-    <div class="container mt-3">
+    <div id="tarefas" class="container mt-3">
 
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">Usado para aliviar a dor e reduzir a febre</p>
-
+                        <img src="assets/img/dipirona.jpg" alt="">
                         <!--Badge é tipo um Label, colocamos o badge dentro de um paragrafo pois o span é inline-->
                         <p><span class="badge text-bg-danger">Remédios</span></p>
 
@@ -122,7 +122,7 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">Aumento da massa muscular em 10 vezes</p>
-                        
+                        <img src="assets/img/seringa.jpg" alt="">
                         <!--Badge é tipo um Label, colocamos o badge dentro de um paragrafo pois o span é inline-->
                         <p><span class="badge text-bg-secondary">Suplementos nutricionais</span></p>
                         
@@ -149,7 +149,7 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">Fique com os dentes igual aos de jogadores de futebol</p>
-                        
+                        <img src="assets/img/pasta de dente.png" alt="">
                         <!--Badge é tipo um Label, colocamos o badge dentro de um paragrafo pois o span é inline-->
                         <p><span class="badge text-bg-warning">Produtos de cuidados pessoais</span></p>
                         
@@ -184,19 +184,19 @@
             <!--Formulario dentro do modal -->
                 <form>
                     <div class="mb-3">
-                    <label for="titulo" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="titulo" aria-describedby="textHelp">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="textHelp">
                     </div>
                     <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição</label>
                     <input type="text" class="form-control" id="descricao">
                     </div>
                     <div class="mb-3">
-                        <select class="form-select" aria-label="categoria">
+                        <select class="form-select" aria-label="categoria" id="categoria">
                             <option selected>Selecione uma Categoria</option>
-                            <option value="1">Remédios</option>
-                            <option value="2">Produtos de cuidados pessoais</option>
-                            <option value="3">Suplementos nutricionais</option>
+                            <option>Remédios</option>
+                            <option>Produtos de cuidados pessoais</option>
+                            <option>Suplementos nutricionais</option>
                         </select>
                     </div>
                 </form>
@@ -204,7 +204,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
             </div>
         </div>
         </div>
@@ -216,5 +216,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="crud.js"></script>
 </body>
 </html>
